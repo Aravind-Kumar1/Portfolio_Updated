@@ -1,0 +1,14 @@
+# Allow all robots access to all content
+User-agent: *
+Disallow:
+
+# Block specific robots from specific paths
+User-agent: BadBot
+Disallow: /private/
+
+# Block all robots from a certain folder
+User-agent: *
+Disallow: /private-folder/
+
+# Sitemap location
+Sitemap: https://www.yoursite.com/sitemap.xml
