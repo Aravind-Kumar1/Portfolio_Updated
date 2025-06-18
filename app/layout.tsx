@@ -13,10 +13,27 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio - Frontend Developer",
-  description: "A world-class portfolio showcasing modern web development skills",
-  generator: 'v0.dev'
-}
+    title: "Aravind Chamaakuri - Frontend Developer",
+    description: "A world-class portfolio showcasing cutting-edge web development expertise, specializing in front-end design, React.js, TypeScript, UI/UX design, and modern web applications. Explore innovative, responsive, and user-centered digital solutions crafted to elevate your online presence and drive user engagement. This version includes essential keywords like \"web development,\" \"front-end design,\" \"React.js,\" \"TypeScript,\" \"UI/UX design,\" \"responsive,\" and \"user-centered digital solutions,\" which will improve visibility and ranking for related search queries.",
+    icons: [
+        {
+            url: "/hero-cir.png",  // This is the correct field for the image URL
+            rel: "icon",
+            sizes: "452x45",  // Specify size for the favicon
+        },
+        {
+            url: "/hero-cir.png",  // This is the correct field for the image URL
+            rel: "icon",
+            sizes: "64x64",
+        },
+        {
+            url: "/hero-cir.png",  // This is the correct field for the image URL
+            rel: "icon",
+            sizes: "128x128",
+        },
+    ],
+};
+
 
 export default function RootLayout({
                                      children,
