@@ -288,7 +288,7 @@ const PremiumPortfolio: React.FC = () => {
                                     onClick={() => handleViewDetails(project.slug)}
                                     className="absolute top-0 right-0 hover:text-white transition-colors duration-200 group/arrow">
                                     <ArrowRight
-                                        className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 group-hover/arrow:text-white group-hover/arrow:translate-x-2 transition-all duration-200 rotate-45"/>
+                                        className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 group-hover/arrow:text-white group-hover/arrow:translate-x-2 transition-all duration-200 rotate-[-45deg]"/>
                                 </button>
                             </div>
                         </div>
