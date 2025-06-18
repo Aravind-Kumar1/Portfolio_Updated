@@ -82,7 +82,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/viral_mock.png",
-            screenshots: ["/viral_mock.png", "/hero.png", "/viral_mock.png"],
+            screenshots: ["/vb1.png", "/vb2.png", "/vb3.png", "/vb4.png"],
             type: "Internship"
         },
         {

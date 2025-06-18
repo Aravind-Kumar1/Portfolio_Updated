@@ -20,7 +20,7 @@ const socialLinks = [
   {
     name: "Twitter",
     icon: Twitter,
-    url: "https://twitter.com",
+    url: "https://x.com/vittypaul123?t=oTTwrwFqQb8j3b56oSZ8Hg&s=09",
     description: "Follow my journey",
   },
   {

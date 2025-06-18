@@ -29,11 +29,33 @@ export default function HeroSection() {
     };
 
     const handleEmailClick = () => {
-        window.location.href = 'mailto:aravindchamaakuri@gmail.com';
+        try {
+            // Create mailto link with proper formatting
+            const mailtoLink = `mailto:aravindchamaakuri@gmail.com?subject=Let's Connect&body=Hi Aravind,%0D%0A%0D%0AI'd like to discuss a potential collaboration.%0D%0A%0D%0ABest regards`;
+
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = mailtoLink;
+            link.style.display = 'none';
+
+            // Add to DOM, click, then remove
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            // Fallback - direct window open
+            const fallbackLink = `mailto:aravindchamaakuri@gmail.com?subject=Let's Connect`;
+            window.open(fallbackLink);
+        }
     };
 
     const handleDownloadCV = () => {
-        alert('CV download functionality - replace with actual CV file path');
+        // Convert Google Drive view link to direct download link
+        const driveFileId = '17HFobAr_wy47zYo6mKdm61dGMFVsn3go';
+        const downloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+
+        // Open in new tab for better user experience
+        window.open(downloadUrl, '_blank');
     };
 
     return (

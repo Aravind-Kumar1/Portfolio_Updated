@@ -37,10 +37,10 @@ export const projects: Project[] = [
         image: "/viral_mock.png", // Keep this as fallback
         images: [
             "/viral_mock.png",    // Hero section image (index 0)
-            "/viral_mock.png",    // Introduction section image (index 1)
-            "/viral_mock_3.png",    // Purpose section image (index 2)
-            "/viral_mock_4.png",    // Why This Project section image (index 3)
-            "/viral_mock_5.png"     // Impact & Results section image (index 4)
+            "/vb1.png",    // Introduction section image (index 1)
+            "/vb2.png",    // Purpose section image (index 2)
+            "/vb3.png",    // Why This Project section image (index 3)
+            "/vb4.png"     // Impact & Results section image (index 4)
         ],
         fullDescription: "Designed and developed the official company website for Viral Bug, a digital marketing agency offering services like web design, development, and digital marketing solutions. Built using Next.js to ensure excellent SEO performance and fast loading speeds, combined with Tailwind CSS for a fully responsive, modern, and clean user interface. Deployed the site on Hostinger with optimized hosting configuration, achieving a Lighthouse performance score of 95+ across all core metrics. The website effectively showcases the company's services, portfolio, and digital presence with a professional and user-friendly experience.",
         technologies: ["Next.js", "Tailwind CSS", "Hostinger"],
@@ -51,12 +51,12 @@ export const projects: Project[] = [
         contributors: [
             {
                 name: "Aravind Chamaakuri",
-                avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face",
+                avatar: "/hero.png",
                 role: "Web Developer"
             },
             {
                 name: "Sai Charan",
-                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+                avatar: "/nadim.jpg",
                 role: "UI/UX Designer"
             }
         ],
@@ -80,10 +80,10 @@ export const projects: Project[] = [
         image: "/adit.png",// Keep this as fallback
         images: [
             "/adit.png",    // Hero section image (index 0)
-            "/viral_mock_2.png",    // Introduction section image (index 1)
-            "/viral_mock_3.png",    // Purpose section image (index 2)
-            "/viral_mock_4.png",    // Why This Project section image (index 3)
-            "/viral_mock_5.png"     // Impact & Results section image (index 4)
+            "/adit.png",    // Introduction section image (index 1)
+            "/ad2.png",    // Purpose section image (index 2)
+            "/ad3.png",    // Why This Project section image (index 3)
+            "/ad4.png"     // Impact & Results section image (index 4)
         ],
         fullDescription: "Developed a dynamic website facilitating smarter hiring processes for IT companies. Designed intuitive sections for home, about, services, contact, and talent discovery, ensuring seamless navigation and user engagement. Features include job listing integration, candidate profiles, client testimonials, and responsive design for optimal viewing on all devices.",
         technologies: ["React.js", "Tailwind CSS"],
@@ -93,8 +93,8 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/Viral2024-DigitalMarketing/aditudesol-1",
         contributors: [
             {
-                name: "Emily White",
-                avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face",
+                name: "Aravind Kumar",
+                avatar: "/hero.png",
                 role: "Frontend Developer"
             },
 
@@ -121,10 +121,10 @@ export const projects: Project[] = [
         image: "/gras.png", // Keep this as fallback
         images: [
             "/gras.png",   // Hero section image (index 0)
-            "/viral_mock_2.png",    // Introduction section image (index 1)
-            "/viral_mock_3.png",    // Purpose section image (index 2)
-            "/viral_mock_4.png",    // Why This Project section image (index 3)
-            "/viral_mock_5.png"     // Impact & Results section image (index 4)
+            "/gras.png",    // Introduction section image (index 1)
+            "/gs1.png",    // Purpose section image (index 2)
+            "/gs2.png",    // Why This Project section image (index 3)
+            "/gs3.png"     // Impact & Results section image (index 4)
         ],
         fullDescription: "Developed a comprehensive website for Grass Root, a microfinance company dedicated to providing small loans to villages and empowering women. The website allows users to apply for loans, track their application status, schedule payments, and authenticate securely. Integrated backend services with a spreadsheet to collect user data, and used EmailJS for sending and receiving client information. The project utilized React.js, Tailwind CSS, and various APIs for smooth data management and user interaction.",
         technologies: ["React.js", "Tailwind CSS", "EmailJS", "API Integration"],
@@ -134,8 +134,8 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/Viral2024-DigitalMarketing/GrassRoot-1",
         contributors: [
             {
-                name: "Laura Adams",
-                avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+                name: "Aravind Kumar",
+                avatar: "/hero.png",
                 role: "Frontend Developer"
             },
 
@@ -164,10 +164,10 @@ export const projects: Project[] = [
         image: "/church.png", // Fallback image
         images: [
             "/church.png", // Hero
-            "/viral_mock_2.png", // Introduction
-            "/viral_mock_3.png", // Purpose
-            "/viral_mock_4.png", // Why This Project
-            "/viral_mock_5.png", // Impact & Results
+            "/ch1.png", // Introduction
+            "/ch2.png", // Purpose
+            "/ch3.png", // Why This Project
+            "/ch4.png", // Impact & Results
         ],
         fullDescription:
             "Built a fully responsive church platform with React.js and CSS Modules, allowing seamless access to sermons, events, and announcements across all devices. Integrated a dynamic contact form via EmailJS, reducing manual follow-ups by 50% and maintaining 99% uptime with lightweight deployment. Features include real-time sermon streaming, event management system, automated email notifications, and mobile-first responsive design that adapts to all screen sizes.",
@@ -178,9 +178,9 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/Aravind-Kumar1/Church-Community",
         contributors: [
             {
-                name: "John Doe",
+                name: "Aravind Kumar",
                 avatar:
-                    "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face",
+                    "/hero.png",
                 role: "Lead Developer",
             },
 
@@ -207,10 +207,10 @@ export const projects: Project[] = [
         image: "/team.png", // Fallback image
         images: [
             "/team.png",    // Hero section
-            "/teams1.png",    // Introduction
-            "/teams1.png",   // Purpose
-            "/teams1.png",    // Why This Project
-            "/teams1.png",     // Impact & Results
+            "/ev1.png",    // Introduction
+            "/ev2.png",   // Purpose
+            "/ev3.png",    // Why This Project
+            "/ev4.png",     // Impact & Results
         ],
         fullDescription:
             "Designed and developed a responsive event management platform using React and ShadCN for a local event business. The website allows users to view upcoming events, make bookings, and request specific services like catering, sound, or staff. I implemented user-friendly navigation, fast-loading UI, secure authentication using Clerk, and category-based filtering for event services. The goal was to make event planning easier and more organized for both organizers and clients.",
@@ -241,10 +241,10 @@ export const projects: Project[] = [
         image: "/smart.png", // Keep this as fallback
         images: [
             "/smart.png",   // Hero section image (index 0)
-            "/viral_mock_2.png",    // Introduction section image (index 1)
-            "/viral_mock_3.png",    // Purpose section image (index 2)
-            "/viral_mock_4.png",    // Why This Project section image (index 3)
-            "/viral_mock_5.png"     // Impact & Results section image (index 4)
+            "/sm1.png",    // Introduction section image (index 1)
+            "/sm2.png",    // Purpose section image (index 2)
+            "/sm3.png",    // Why This Project section image (index 3)
+            "/sm4.png"     // Impact & Results section image (index 4)
         ],
         fullDescription: "Developed a comprehensive reading platform using React.js and Firebase Firestore, enabling users to read books, take notes, and maintain a personalized library with seamless synchronization. Integrated Spotify Embedded API for audiobook functionality and implemented user authentication, wishlist management, and note-taking features. Features include cloud synchronization, collaborative reading groups, progress tracking, intelligent bookmarking, and cross-platform accessibility.",
         technologies: ["React.js", "Firebase", "Firestore", "Spotify API"],
@@ -254,13 +254,13 @@ export const projects: Project[] = [
         githubUrl: "https://github.com/Aravind-Kumar1/Smart_Read_Platform",
         contributors: [
             {
-                name: "Emma Davis",
-                avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop&crop=face",
+                name: "Aravind Kumar",
+                avatar: "/hero.png",
                 role: "Solo Developer"
             }
         ],
         features: [
-            "Cloud synchronization",
+
             "Collaborative reading groups",
             "Progress tracking",
             "Intelligent bookmarking",
@@ -282,10 +282,10 @@ export const projects: Project[] = [
         image: "/cam.png",
         images: [
             "/cam.png",
-            "/viral_mock_2.png",
-            "/viral_mock_3.png",
-            "/viral_mock_4.png",
-            "/viral_mock_5.png"
+            "/cam.png",
+            "/cam.png",
+            "/cam.png",
+            "/cam.png"
         ],
         fullDescription:
             "CampusBuzz is a centralized event management app for college campuses, built using Flutter and Firebase. As the frontend developer, I worked on the mobile UI and developed the web dashboard for event admins using Flutter Web. The app includes geolocation-based recommendations, push notifications, offline support, and real-time event updates. The project was a collaborative academic effort by an 8-member team focused on simplifying event engagement for students and organizers.",
@@ -297,27 +297,27 @@ export const projects: Project[] = [
         contributors: [
             {
                 name: "Aravind Kumar",
-                avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face",
+                avatar: "/hero.png",
                 role: "Mobile UI Developer & Web Portal Developer"
             },
             {
-                name: "Priya Sharma",
-                avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=face",
+                name: "Dhruv",
+                avatar: "/dhruv.jpg",
                 role: "Backend Developer"
             },
             {
-                name: "Rahul Verma",
-                avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=100&h=100&fit=crop&crop=face",
+                name: "Anas",
+                avatar: "/anas.jpg",
                 role: "Backend Developer"
             },
             {
-                name: "Sneha Kapoor",
-                avatar: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=100&h=100&fit=crop&crop=face",
+                name: "Jayanth ",
+                avatar: "/jay.jpg",
                 role: "Frontend Developer"
             },
             {
-                name: "Aditya Mehra",
-                avatar: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop&crop=face",
+                name: "Bobburi Umesh",
+                avatar: "/umesh.jpg",
                 role: "Frontend Developer"
             }
         ],

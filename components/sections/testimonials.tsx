@@ -4,44 +4,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-
 const testimonials = [
     {
         name: "Sai Charan",
         role: "Designer",
         image: "/nadim.jpg",
-        content: "Aravind’s designs are always on point. He has a great eye for detail and always delivers creative and user-friendly solutions.",
+        content: "Aravind's designs are always on point. He pays great attention to detail and creates user-friendly solutions.",
         rating: 5,
     },
     {
         name: "Bobburi Umesh",
-        role: "SDE at Possible Works",
+        role: "Software Developer, Possible Works",
         image: "/umesh.jpg",
-        content: "Aravind is a talented developer. His attention to detail and problem-solving skills made the project smooth and efficient.",
+        content: "Aravind is a talented developer. His attention to detail and problem-solving skills made working together easy.",
         rating: 5,
     },
     {
         name: "Dhruv Y.Y. Thacker",
-        role: "Software Engineer at Pixelvide",
+        role: "Software Engineer, Pixelvide",
         image: "/dhruv.jpg",
-        content: "Working with Aravind was great. He’s a skilled developer who ensures quality and delivers results on time.",
+        content: "Aravind is great to work with. He ensures quality and always delivers results on time.",
         rating: 5,
     },
     {
         name: "Achampeta Jayanth",
-        role: "Software Developer at Bees",
+        role: "Software Developer, Bees",
         image: "/jay.jpg",
-        content: "Aravind is efficient and professional. He quickly grasps challenges and consistently delivers high-quality solutions.",
+        content: "Aravind is efficient and always finds good solutions. He consistently delivers high-quality work.",
         rating: 5,
     },
     {
         name: "Anas",
-        role: "Fellow Developer in College",
+        role: "Fellow Developer, St. Peter's Engineering College",
         image: "/anas.jpg",
-        content: "Aravind is a great collaborator. He’s always helpful and makes projects enjoyable to work on.",
+        content: "Aravind is a great team player. He’s always ready to help and makes projects more enjoyable.",
         rating: 5,
     },
 ];
+
 
 export default function Testimonials() {
     const [isMobile, setIsMobile] = useState(false);

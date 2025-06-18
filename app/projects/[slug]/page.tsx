@@ -17,6 +17,16 @@ export default function ProjectDetail({ params }: Props) {
 
     if (!project) return notFound();
 
+    // Helper function to get the correct image for each section
+    const getProjectImage = (index: number) => {
+        // If project has images array and the specific index exists, use it
+        if (project.images && project.images[index]) {
+            return project.images[index];
+        }
+        // Fallback to the main project image
+        return project.image;
+    };
+
     // Black color for all tags
     const getTagColor = () => {
         return "bg-black text-white border-gray-600";
@@ -65,11 +75,11 @@ export default function ProjectDetail({ params }: Props) {
                         </div>
                     </div>
 
-                    {/* Full Width Hero Image */}
+                    {/* Full Width Hero Image - Using index 0 */}
                     <div className="relative mb-20">
                         <div className="overflow-hidden rounded-2xl border border-gray-700/50 bg-gray-800/50 backdrop-blur-sm">
                             <img
-                                src={project.image}
+                                src={getProjectImage(0)}
                                 alt={project.title}
                                 className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover"
                             />
@@ -109,7 +119,7 @@ export default function ProjectDetail({ params }: Props) {
             <section className="py-20">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-                    {/* Introduction Section */}
+                    {/* Introduction Section - Using index 1 */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
@@ -133,19 +143,19 @@ export default function ProjectDetail({ params }: Props) {
                         </div>
                         <div className="relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
-                                src={project.image}
-                                alt="Project preview"
+                                src={getProjectImage(1)}
+                                alt="Project introduction"
                                 className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>
                     </div>
 
-                    {/* Purpose Section */}
+                    {/* Purpose Section - Using index 2 */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
-                                src={project.image}
+                                src={getProjectImage(2)}
                                 alt="Purpose illustration"
                                 className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
                             />
@@ -162,16 +172,11 @@ export default function ProjectDetail({ params }: Props) {
                                 <p>This project was designed to address specific challenges in {project.category?.toLowerCase()} by providing innovative solutions that enhance user experience and streamline processes.</p>
                                 <p>The main goal was to create a platform that not only meets current needs but also scales for future requirements, ensuring long-term value and sustainability.</p>
                             </div>
-                            {project.duration && (
-                                <div className="flex items-center gap-2 text-gray-400 pt-4">
-                                    <Clock className="w-4 h-4" />
-                                    <span className="text-base">Development Period: {project.duration}</span>
-                                </div>
-                            )}
+
                         </div>
                     </div>
 
-                    {/* Why This Project Section */}
+                    {/* Why This Project Section - Using index 3 */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
@@ -197,19 +202,19 @@ export default function ProjectDetail({ params }: Props) {
                         </div>
                         <div className="relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
-                                src={project.image}
-                                alt="Project impact"
+                                src={getProjectImage(3)}
+                                alt="Project inspiration"
                                 className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>
                     </div>
 
-                    {/* Impact & Results Section */}
+                    {/* Impact & Results Section - Using index 4 */}
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
-                                src={project.image}
+                                src={getProjectImage(4)}
                                 alt="Results showcase"
                                 className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
                             />
@@ -226,16 +231,7 @@ export default function ProjectDetail({ params }: Props) {
                                 <p>This project successfully delivered measurable improvements in user engagement and operational efficiency, showcasing the power of thoughtful design and robust development.</p>
                                 <p>The implementation resulted in enhanced user satisfaction and provided valuable insights for future development projects.</p>
                             </div>
-                            <div className="grid grid-cols-2 gap-4 pt-4">
-                                <div className="text-center p-4 bg-gray-800/30 rounded-lg border border-gray-700/30">
-                                    <div className="text-2xl font-bold text-white mb-1">99%</div>
-                                    <div className="text-sm text-gray-400">Uptime</div>
-                                </div>
-                                <div className="text-center p-4 bg-gray-800/30 rounded-lg border border-gray-700/30">
-                                    <div className="text-2xl font-bold text-white mb-1">40%</div>
-                                    <div className="text-sm text-gray-400">Engagement</div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
 

@@ -90,7 +90,7 @@ export default function ContactPreview() {
                     <div className="w-full lg:w-auto text-left">
                         <h3 className="text-2xl sm:text-3xl lg:text-5xl font-medium text-[#EBD6A4] leading-tight">
                             <span className="block">ARAVIND</span>
-                            <span className="block">KUMAR</span>
+                            <span className="block">CHAMAAKURI</span>
                         </h3>
                     </div>
 
@@ -134,28 +134,28 @@ export default function ContactPreview() {
                                     Connect
                                 </h4>
                                 <Link
-                                    href="https://github.com"
+                                    href="https://github.com/Aravind-Kumar1"
                                     target="_blank"
                                     className="text-gray-400 hover:text-white text-sm transition"
                                 >
                                     GitHub
                                 </Link>
                                 <Link
-                                    href="https://linkedin.com"
+                                    href="https://www.linkedin.com/in/aravind-chamaakuri/"
                                     target="_blank"
                                     className="text-gray-400 hover:text-white text-sm transition"
                                 >
                                     LinkedIn
                                 </Link>
                                 <Link
-                                    href="https://twitter.com"
+                                    href="https://x.com/vittypaul123?t=oTTwrwFqQb8j3b56oSZ8Hg&s=09"
                                     target="_blank"
                                     className="text-gray-400 hover:text-white text-sm transition"
                                 >
                                     Twitter
                                 </Link>
                                 <Link
-                                    href="mailto:aravind@example.com"
+                                    href="mailto:aravindchamaakuri@gmail.com"
                                     className="text-gray-400 hover:text-white text-sm transition"
                                 >
                                     Email

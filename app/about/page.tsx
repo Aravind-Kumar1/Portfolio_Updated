@@ -15,7 +15,7 @@ export default function AboutPage() {
             <IntroTimeline/>
             <div>
                 <CTASection
-                    labelText="Innovate with Ease"
+                    labelText="Craft Smarter, Not Harder"
                     heroText="Building modern, responsive websites and apps tailored to your business needs."
                 />
             </div>
