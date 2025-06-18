@@ -82,7 +82,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/viral_mock.png",
-            screenshots: ["/vb1.png", "/vb2.png", "/vb3.png", "/vb4.png"],
+            screenshots: ["/vb2.png", "/vb3.png", "/vb4.png"],
             type: "Internship"
         },
         {
@@ -97,7 +97,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/adit.png",
-            screenshots: ["/hero.png", "/viral_mock.png", "/hero.png"],
+            screenshots: ["/ad2.png", "/ad3.png", "/ad4.png"],
             type: "Internship"
         },
         {
@@ -113,7 +113,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/gras.png",
-            screenshots: ["/hero.png", "/viral_mock.png", "/hero.png"],
+            screenshots: ["/gs1.png", "/gs2.png", "/gs3.png"],
             type: "Internship"
         },
         {
@@ -128,7 +128,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/church.png",
-            screenshots: ["/hero.png", "/viral_mock.png", "/hero.png"],
+            screenshots: ["/ch1.png", "/ch2.png", "/ch3.png"],
             type: "Community Contribution Project"
         },
         {
@@ -143,7 +143,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/team.png",
-            screenshots: ["/hero.png", "/viral_mock.png", "/hero.png"],
+            screenshots: ["/ev1.png", "/ev2.png", "/ev3.png"],
             type: "Volunteer Project"
         },
         {
@@ -158,7 +158,7 @@ const PremiumPortfolio: React.FC = () => {
             ],
             isLive: true,
             image: "/cam.png",
-            screenshots: ["/hero.png", "/viral_mock.png", "/hero.png"],
+            screenshots: ["/cam.png", "/cam.png", "/cam.png"],
             type: "Academic"
         },
     ];

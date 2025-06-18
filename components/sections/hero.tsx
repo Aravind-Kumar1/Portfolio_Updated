@@ -175,8 +175,8 @@ export default function HeroSection() {
                                         title="GitHub"
                                     >
                                         <Github
-                                            size={14}
-                                            className="sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] text-white/80 group-hover:text-white transition-all duration-300"
+                                            size={16}
+                                            className="sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/80 group-hover:text-white transition-all duration-300"
                                         />
                                     </a>
                                     <a
@@ -187,8 +187,8 @@ export default function HeroSection() {
                                         title="LinkedIn"
                                     >
                                         <Linkedin
-                                            size={14}
-                                            className="sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] text-white/80 group-hover:text-white transition-all duration-300"
+                                            size={16}
+                                            className="sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/80 group-hover:text-white transition-all duration-300"
                                         />
                                     </a>
                                     <button
@@ -197,8 +197,8 @@ export default function HeroSection() {
                                         title="Email"
                                     >
                                         <Mail
-                                            size={14}
-                                            className="sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] text-white/80 group-hover:text-white transition-all duration-300"
+                                            size={16}
+                                            className="sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/80 group-hover:text-white transition-all duration-300"
                                         />
                                     </button>
                                     <button
@@ -207,8 +207,8 @@ export default function HeroSection() {
                                         title="Download CV"
                                     >
                                         <Download
-                                            size={14}
-                                            className="sm:w-4 sm:h-4 md:w-[18px] md:h-[18px] text-white/80 group-hover:text-white transition-all duration-300"
+                                            size={16}
+                                            className="sm:w-5 sm:h-5 md:w-5 md:h-5 lg:w-6 lg:h-6 text-white/80 group-hover:text-white transition-all duration-300"
                                         />
                                     </button>
                                 </div>

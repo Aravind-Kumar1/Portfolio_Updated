@@ -35,7 +35,7 @@ export default function ProjectDetail({ params }: Props) {
     return (
         <div className="min-h-screen bg-black text-white">
             {/* Hero Section with New Layout */}
-            <section className="pt-32 pb-24">
+            <section className="pt-32 pb-12 sm:pb-16 lg:pb-20">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* My Work Label */}
                     <div className="text-center mb-8">
@@ -75,28 +75,29 @@ export default function ProjectDetail({ params }: Props) {
                         </div>
                     </div>
 
-                    {/* Full Width Hero Image - Using index 0 */}
-                    <div className="relative mb-20">
+                    {/* Full Width Hero Image - Fixed for mobile */}
+                    <div className="relative mb-8 sm:mb-12 lg:mb-16">
                         <div className="overflow-hidden rounded-2xl border border-gray-700/50 bg-gray-800/50 backdrop-blur-sm">
                             <img
                                 src={getProjectImage(0)}
                                 alt={project.title}
-                                className="w-full h-[400px] sm:h-[500px] lg:h-[600px] object-cover"
+                                className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover object-center"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
 
                         {/* Floating Action Buttons */}
-                        <div className="absolute bottom-6 left-6 flex gap-3">
+                        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 flex gap-2 sm:gap-3">
                             {project.liveUrl && (
                                 <a
                                     href={project.liveUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-blue-600/90 hover:bg-blue-500 backdrop-blur-sm px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 hover:scale-105"
+                                    className="flex items-center gap-2 bg-blue-600/90 hover:bg-blue-500 backdrop-blur-sm px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-200 hover:scale-105"
                                 >
-                                    <PlayCircle className="w-4 h-4" />
-                                    Live Demo
+                                    <PlayCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+                                    <span className="hidden sm:inline">Live Demo</span>
+                                    <span className="sm:hidden">Demo</span>
                                 </a>
                             )}
                             {project.githubUrl && (
@@ -104,9 +105,9 @@ export default function ProjectDetail({ params }: Props) {
                                     href={project.githubUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 bg-gray-800/90 hover:bg-gray-700 backdrop-blur-sm border border-gray-600/50 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 hover:scale-105"
+                                    className="flex items-center gap-2 bg-gray-800/90 hover:bg-gray-700 backdrop-blur-sm border border-gray-600/50 px-3 py-2 sm:px-4 sm:py-2 rounded-lg font-semibold text-xs sm:text-sm transition-all duration-200 hover:scale-105"
                                 >
-                                    <Github className="w-4 h-4" />
+                                    <Github className="w-3 h-3 sm:w-4 sm:h-4" />
                                     Code
                                 </a>
                             )}
@@ -116,11 +117,11 @@ export default function ProjectDetail({ params }: Props) {
             </section>
 
             {/* Content Sections with Better Layout */}
-            <section className="py-20">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+            <section className="py-12 sm:py-16 lg:py-20">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20 lg:space-y-24">
 
                     {/* Introduction Section - Using index 1 */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
@@ -145,19 +146,19 @@ export default function ProjectDetail({ params }: Props) {
                             <img
                                 src={getProjectImage(1)}
                                 alt="Project introduction"
-                                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                                className="w-full h-64 sm:h-72 lg:h-80 object-cover object-center hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>
                     </div>
 
                     {/* Purpose Section - Using index 2 */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
                         <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
                                 src={getProjectImage(2)}
                                 alt="Purpose illustration"
-                                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                                className="w-full h-64 sm:h-72 lg:h-80 object-cover object-center hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>
@@ -177,7 +178,7 @@ export default function ProjectDetail({ params }: Props) {
                     </div>
 
                     {/* Why This Project Section - Using index 3 */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
                         <div className="space-y-6">
                             <div className="flex items-center gap-3 mb-6">
                                 <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center">
@@ -204,19 +205,19 @@ export default function ProjectDetail({ params }: Props) {
                             <img
                                 src={getProjectImage(3)}
                                 alt="Project inspiration"
-                                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                                className="w-full h-64 sm:h-72 lg:h-80 object-cover object-center hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>
                     </div>
 
                     {/* Impact & Results Section - Using index 4 */}
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
                         <div className="order-2 lg:order-1 relative overflow-hidden rounded-xl border border-gray-700/50">
                             <img
                                 src={getProjectImage(4)}
                                 alt="Results showcase"
-                                className="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"
+                                className="w-full h-64 sm:h-72 lg:h-80 object-cover object-center hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                         </div>

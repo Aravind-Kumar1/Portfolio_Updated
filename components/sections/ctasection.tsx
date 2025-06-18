@@ -21,7 +21,8 @@ export default function CTASection({ labelText, heroText }: CTASectionProps) {
         <section className="py-12 sm:py-16 md:py-24 bg-gray-900/30" style={{ fontFamily: "Poppins, sans-serif" }}>
             <div className="container mx-auto px-4 sm:px-6">
                 <div className="w-full">
-                    <Card className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-blue-500/20 shadow-2xl rounded-2xl sm:rounded-3xl">
+                    <Card
+                        className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 border-blue-500/20 shadow-2xl rounded-2xl sm:rounded-3xl">
                         <CardContent
                             className="p-6 sm:p-10 md:p-16 text-left min-h-[320px] sm:min-h-[400px] md:min-h-[630px] flex flex-col justify-center font-light">
                             {/* Label */}
@@ -40,38 +41,37 @@ export default function CTASection({ labelText, heroText }: CTASectionProps) {
                                 {heroText || defaultHeroText}
                             </h2>
 
-                            {/* CTA Buttons - Side by Side on all screens */}
                             <div
-                                className="flex flex-row flex-wrap gap-2 sm:gap-3 md:gap-4 justify-start mt-4 sm:mt-6 md:mt-8 w-full">
-
+                                className="flex flex-row gap-2 sm:gap-3 md:gap-4 justify-start mt-4 sm:mt-6 md:mt-8 w-full">
                                 {/* Start Your Project Button */}
-                                <Link href="/contact" className="flex-1 sm:flex-none">
+                                <Link href="/contact" className="flex-1 min-w-[120px] max-w-[150px] sm:max-w-[180px] md:max-w-[220px]">
                                     <button
-                                        className="group relative w-full sm:w-auto px-3 py-3.5 sm:px-4 sm:py-3.5 md:px-6 md:py-4 lg:px-8 lg:py-4 bg-white text-blue-600 font-semibold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide rounded-xl hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-2xl"
+                                        className="group w-full px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-white text-blue-600 font-semibold text-xs sm:text-sm md:text-base tracking-wide rounded-xl hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-2xl"
                                         onMouseEnter={() => setHoveredButton('primary')}
                                         onMouseLeave={() => setHoveredButton(null)}
                                     >
-        <span className="flex items-center">
-            Start Your Project
-            <ArrowRight
-                className="ml-1.5 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 lg:w-6 lg:h-6 text-blue-600 group-hover:translate-x-1 transition-transform duration-300"
-            />
-        </span>
+                                        <span className="flex items-center">
+                                            Start Project
+                                            <ArrowRight className="ml-1.5 w-4 h-4 sm:w-5 sm:h-5 text-blue-600 group-hover:translate-x-1 transition-transform duration-300" />
+                                        </span>
                                     </button>
                                 </Link>
 
                                 {/* See My Work Button */}
-                                <Link href="/projects" className="flex-1 sm:flex-none">
+                                <Link href="/projects" className="flex-1 min-w-[120px] max-w-[150px] sm:max-w-[180px] md:max-w-[220px]">
                                     <button
-                                        className="w-full sm:w-auto px-3 py-3.5 sm:px-4 sm:py-3.5 md:px-6 md:py-4 lg:px-8 lg:py-4 bg-transparent border-2 border-blue-400 text-blue-100 font-semibold text-xs sm:text-sm md:text-base lg:text-lg tracking-wide rounded-xl hover:bg-blue-400 hover:text-blue-900 transition-all duration-300 flex items-center justify-center shadow-2xl"
+                                        className="group w-full px-3 py-2 sm:px-4 sm:py-2.5 md:px-5 md:py-3 bg-transparent border-2 border-blue-600 text-blue-100 font-semibold text-xs sm:text-sm md:text-base tracking-wide rounded-xl transition-all duration-300 flex items-center justify-center shadow-2xl hover:bg-blue-600 hover:text-white hover:border-blue-600"
                                         onMouseEnter={() => setHoveredButton('secondary')}
                                         onMouseLeave={() => setHoveredButton(null)}
                                     >
-                                        See My Work
+                                        <span className="flex items-center">
+                                            See My Work
+                                            <ArrowRight
+                                                className="ml-1.5 w-4 h-4 sm:w-5 sm:h-5 text-blue-100 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 lg:hidden"
+                                            />
+                                        </span>
                                     </button>
                                 </Link>
-
-
                             </div>
                         </CardContent>
                     </Card>
