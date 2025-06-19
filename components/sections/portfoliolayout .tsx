@@ -157,8 +157,8 @@ const PremiumPortfolio: React.FC = () => {
                 "Social fitness challenges"
             ],
             isLive: true,
-            image: "/cam.png",
-            screenshots: ["/cam.png", "/cam.png", "/cam.png"],
+            image: "/cam.jpg",
+            screenshots: ["/cam.jpg", "/web.png", "/cam.jpg"],
             type: "Academic"
         },
     ];

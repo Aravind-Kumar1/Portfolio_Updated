@@ -6,6 +6,7 @@ import { projects } from "@/lib/data/project"
 
 export default function ScrollBlurGallery() {
     const [visibleProjects, setVisibleProjects] = useState<Set<number>>(new Set())
+    const [hasBeenVisible, setHasBeenVisible] = useState<Set<number>>(new Set())
     const projectRefs = useRef<Record<number, HTMLDivElement | null>>({})
     const router = useRouter()
 
@@ -19,15 +20,30 @@ export default function ScrollBlurGallery() {
                 entries.forEach((entry) => {
                     const target = entry.target as HTMLDivElement
                     const projectId = parseInt(target.dataset.projectId as string)
-                    setVisibleProjects((prev) => {
-                        const newSet = new Set(prev)
-                        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+
+                    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+                        setVisibleProjects((prev) => {
+                            const newSet = new Set(prev)
                             newSet.add(projectId)
-                        } else {
-                            newSet.delete(projectId)
-                        }
-                        return newSet
-                    })
+                            return newSet
+                        })
+
+                        // Mark as having been visible (only happens once)
+                        setHasBeenVisible((prev) => {
+                            const newSet = new Set(prev)
+                            newSet.add(projectId)
+                            return newSet
+                        })
+                    } else {
+                        // Only remove from visible if it hasn't been seen before
+                        setVisibleProjects((prev) => {
+                            const newSet = new Set(prev)
+                            if (!hasBeenVisible.has(projectId)) {
+                                newSet.delete(projectId)
+                            }
+                            return newSet
+                        })
+                    }
                 })
             },
             {
@@ -41,7 +57,7 @@ export default function ScrollBlurGallery() {
         })
 
         return () => observer.disconnect()
-    }, [])
+    }, [hasBeenVisible])
 
     return (
         <div className="min-h-screen bg-black text-white antialiased scroll-blur-gallery">
@@ -55,12 +71,12 @@ export default function ScrollBlurGallery() {
                     -moz-osx-font-smoothing: grayscale;
                 }
 
-                /* Updated blur effects - subtle for all screen sizes */
+                /* Updated text blur effects - very fast and minimal */
                 .card-blur {
-                    filter: blur(2px);
-                    opacity: 0.8;
-                    transform: scale(0.98) translateY(10px);
-                    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                    filter: blur(0.5px);
+                    opacity: 0.9;
+                    transform: scale(0.99) translateY(5px);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     background-color: rgba(255, 255, 255, 0.85);
                     color: #000000;
                     border-radius: 16px;
@@ -72,7 +88,7 @@ export default function ScrollBlurGallery() {
                     filter: blur(0);
                     opacity: 1;
                     transform: scale(1) translateY(0);
-                    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
                     background-color: rgba(255, 255, 255, 0.95);
                     color: #000000;
                     border-radius: 16px;
@@ -109,30 +125,6 @@ export default function ScrollBlurGallery() {
                     border-color: #d1d5db !important;
                 }
 
-                .decrypt-animation {
-                    animation: decrypt 2s ease-in-out;
-                }
-
-                @keyframes decrypt {
-                    0% {
-                        content: attr(data-text);
-                        filter: blur(2px);
-                        opacity: 0.3;
-                    }
-                    10% { content: "█▓▒░░▒▓█"; }
-                    20% { content: "▓▒░██░▒▓"; }
-                    30% { content: "▒░███░▒"; }
-                    40% { content: "░████░"; }
-                    50% { content: "█████"; }
-                    60% { content: attr(data-text); opacity: 0.6; }
-                    80% { opacity: 0.8; }
-                    100% {
-                        content: attr(data-text);
-                        filter: blur(0);
-                        opacity: 1;
-                    }
-                }
-
                 .project-number {
                     position: absolute;
                     top: 16px;
@@ -160,7 +152,7 @@ export default function ScrollBlurGallery() {
                     order: 2;
                 }
 
-                /* Updated image blur effects - subtle for all screen sizes */
+                /* Keep image blur effects same as before */
                 .image-blur {
                     filter: blur(2px);
                     opacity: 0.8;
@@ -394,7 +386,7 @@ export default function ScrollBlurGallery() {
                                 <div className="project-text card-content space-y-10">
                                     <div className="space-y-2">
                                         <h2
-                                            className={`font-medium leading-tight tracking-tight ${visibleProjects.has(project.id) ? 'decrypt-animation' : ''}`}
+                                            className="font-medium leading-tight tracking-tight"
                                             style={{
                                                 fontSize: 'clamp(28px, 6vw, 48px)',
                                                 color: '#000000'

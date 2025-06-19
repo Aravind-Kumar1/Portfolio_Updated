@@ -279,13 +279,13 @@ export const projects: Project[] = [
         slug: "campusbuzz",
         title: "CampusBuzz",
         description: "A cross-platform mobile and web application connecting students with campus events through smart discovery and intuitive dashboards.",
-        image: "/cam.png",
+        image: "/cam.jpg",
         images: [
-            "/cam.png",
-            "/cam.png",
-            "/cam.png",
-            "/cam.png",
-            "/cam.png"
+            "/cam.jpg",
+            "/web.png",
+            "/cam.jpg",
+            "/web.png",
+            "/cam.jpg"
         ],
         fullDescription:
             "CampusBuzz is a centralized event management app for college campuses, built using Flutter and Firebase. As the frontend developer, I worked on the mobile UI and developed the web dashboard for event admins using Flutter Web. The app includes geolocation-based recommendations, push notifications, offline support, and real-time event updates. The project was a collaborative academic effort by an 8-member team focused on simplifying event engagement for students and organizers.",

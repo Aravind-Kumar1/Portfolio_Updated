@@ -51,8 +51,9 @@ export default function HeroSection() {
 
     const handleDownloadCV = () => {
         // Convert Google Drive view link to direct download link
-        const driveFileId = '17HFobAr_wy47zYo6mKdm61dGMFVsn3go';
+        const driveFileId = '1kX5UD-vKY7aTQg72I_8RZF4ua1sKGYsN';
         const downloadUrl = `https://drive.google.com/uc?export=download&id=${driveFileId}`;
+
 
         // Open in new tab for better user experience
         window.open(downloadUrl, '_blank');
